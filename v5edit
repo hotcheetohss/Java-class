@@ -1,0 +1,48 @@
+public static int readInHighScore() throws IOException
+	
+	{
+		//declare a File object
+			  File filein = new File("highscores.txt"); //attempt to open "highscores.txt"
+				
+			  //Declare a scanner object
+			  Scanner fileInput = new Scanner(filein);		
+	
+			  //declare variables
+		      int highscore = 0;
+		      
+		      while(fileInput.hasNext()) //while there is data in the file
+		      {  
+		      //read in a line
+		      highscore = fileInput.nextInt();
+		      }
+		      //close file
+		      fileInput.close();
+		      
+			return highscore;
+			
+	}
+			public static void compareScore(int highScore, int userScore)throws IOException
+			{
+				//declare file object
+				File filein = new File("highscores.txt");
+				
+				//declare scanner object
+				Scanner fileInput = new Scanner(filein);
+				
+				//read the highscore.txt 
+				while(fileInput.hasNext())
+				{
+				//Compare the user's score
+				if (userScore > highScore) 
+				{
+					System.out.println(" " + userScore );
+				}
+				else
+				{
+					System.out.println(" " + highScore);
+				}
+				}
+				fileInput.close();
+				
+				
+				
