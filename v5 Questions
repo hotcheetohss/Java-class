@@ -1,0 +1,6 @@
+A parameter variable's scope is the entire program that contains the method in which the parameter is declared.
+T/F
+A: F
+The contents of a String object cannot be changed.
+T/F
+A: T
